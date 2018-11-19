@@ -509,7 +509,7 @@ void detectNativeCompilers(struct Solution &s)
     }
 
     //p = resolve("ld.gold");
-    p = resolve("gcc-8");
+    p = resolve("gcc");
     if (!p.empty())
     {
         auto Linker = std::make_shared<GNULinker>();
@@ -542,7 +542,7 @@ void detectNativeCompilers(struct Solution &s)
         s.registerProgramAndLanguage("org.gnu.gcc.as", C, L);
     }
 
-    p = resolve("gcc-8");
+    p = resolve("gcc");
     if (!p.empty())
     {
         // C
@@ -562,7 +562,7 @@ void detectNativeCompilers(struct Solution &s)
         }
     }
 
-    p = resolve("g++-8");
+    p = resolve("g++");
     if (!p.empty())
     {
         // CPP
@@ -585,7 +585,7 @@ void detectNativeCompilers(struct Solution &s)
     // clang
     {
         //p = resolve("ld.gold");
-        p = resolve("clang-7");
+        p = resolve("clang");
         if (!p.empty())
         {
             auto Linker = std::make_shared<GNULinker>();
@@ -616,7 +616,7 @@ void detectNativeCompilers(struct Solution &s)
             }
         }
 
-        p = resolve("clang++-7");
+        p = resolve("clang++");
         if (!p.empty())
         {
             // CPP
